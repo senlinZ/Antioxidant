@@ -70,9 +70,15 @@ bigslice  bigslice
 ## 9.Antioxidant identification models training using chemprop
 ```
 #Use NRF2 data as an example
+#hyperparameter_optimization
+python ./chemprop-master/hyperparameter_optimization.py \
+--data_path NRF2_data_for_train.csv \
+--dataset_type classification \
+--num_iters 5 \
+--config_save_path NRF2_classification_ensemble_config
 
 #Train
-python train.py --data_path data/NRF2_data_for_train.csv \
+python ./chemprop-master/train.py --data_path data/NRF2_data_for_train.csv \
     --dataset_type classification \
     --save_dir NRF2_test \
     --config_path NRF2_classification_ensemble_config --split_type scaffold_balanced \
@@ -91,7 +97,7 @@ python train.py --data_path data/NRF2_data_for_train.csv \
     --extra_metrics f1 mcc auc
 
 #Prediction
-python predict.py \
+python ./chemprop-master/predict.py \
     --test_path data/NRF2_data.csv \
     --checkpoint_dir trained_model/ET_classification_ensemble_loss_binary_cross_entropy_prc-auc1/ \
     --features_generator morgan morgan_count rdkit_2d_normalized   \
@@ -99,7 +105,7 @@ python predict.py \
     --preds_path predicted/NRF2_prediction.csv
 
 #Interpret
-python interpret.py \
+python ./chemprop-master/interpret.py \
     --data_path "data/Lipid_data_to_interpret2.csv" \
     --checkpoint_dir "trained_model/Lipid_classification_ensemble_loss_binary_cross_entropy_prc-auc1/" \
     --property_id 1  \
