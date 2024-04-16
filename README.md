@@ -1,7 +1,12 @@
 # Antioxidant
 
 ## 1.Assembly
-
+```
+#
+input_reads_fastq="your_hifi_reads.fastq.gz"
+output_dir="hifiasm_meta_output.log"
+hifiasm_meta -t32 -oasm "${input_reads_fastq}" 2>"${output_dir}"
+```
 
 ## 2.Improve quality of MAGs
 
@@ -50,9 +55,9 @@ bash ~/application/BIG-SPACE/bin/run_bigscape GBKs/ new_antismash6_0.3_0.9_newmi
 ## 8.BIG-SLICE
 
 ```
-target folder="bigslice'
+target_folder="bigslice'
 
-for file in "$target _folder"/*; do
+for file in "$target_folder"/*; do
   folder name=S(basename "sfile" |cut -d''-f1)
   mkdir -p "Sfolder_name"
   mv "Sfile" "Sfolder_name/"
