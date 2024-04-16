@@ -2,11 +2,12 @@
 
 ## 1.Assembly
 ```
-#
+#Third-generation sequencing assembly 
 input_reads_fastq="your_hifi_reads.fastq.gz"
 output_dir="hifiasm_meta_output.log"
 hifiasm_meta -t32 -oasm "${input_reads_fastq}" 2>"${output_dir}"
 ```
+
 
 ## 2.Improve quality of MAGs
 
