@@ -33,7 +33,7 @@ dRep dereplicate dRepOut -p 56 -g 02.filter/*.fa --ignoreGenomeQuality -pa 0.95 
 gtdbtk classify_wf --extension fa --genome_dir 02.filter/ --cpus 88 --out_dir gtdbtkout --prefix cowmag
 ```
 
-## 6.antismash
+## 6.Antismash
 
 ```
 #/bin/bash
