@@ -50,9 +50,18 @@ bash ~/application/BIG-SPACE/bin/run_bigscape tiqu_qingpan_gbks_real_whole/ new_
 ## 8.BIG-SLICE
 
 ```
-##-query mode
-bigslice --query BGC/input_gbk --n_ranks 1 OUTPUT -t 30
+target folder="bigslice'
+
+for file in "$target _folder"/*; do
+  folder name=S(basename "sfile" |cut -d''-f1)
+  mkdir -p "Sfolder_name"
+  mv "Sfile" "Sfolder_name/"
+done
+
+bigslice  BGC/bigslice
 ```
+
+## 9.Antioxidant identification models training
 
 
 
